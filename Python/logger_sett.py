@@ -17,6 +17,7 @@ def get_format_console():
     f = '[%(levelname)s] %(message)s'
     return logging.Formatter(f)
 
+
 def logger_set_up():
     logger = logging.getLogger('first_logger')
     log_file = logging.FileHandler(get_file_name())
