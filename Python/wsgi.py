@@ -1,4 +1,4 @@
-from Python.flask_runner import get_app
+from flask_runner import get_app
 
 app = get_app()
 

@@ -1,6 +1,6 @@
 from flask import Flask
-from Python.app import blueprints
-from Python.logger_sett import logger_set_up
+from app import blueprints
+from logger_sett import logger_set_up
 
 
 #from app.libs.models_handler import ModelsHandler
