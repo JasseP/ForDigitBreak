@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ru.techbreak.webserver",
+      "nativeLanguage": "ru"
+    },
+    "jhipsterVersion": "6.1.0",
+    "applicationType": "monolith",
+    "baseName": "WebServer",
+    "packageName": "ru.techbreak.webserver",
+    "packageFolder": "ru/techbreak/webserver",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MDg5YTA3N2QwYzQ0MmYyNTNkMzJhYWQxMmQzY2ZlZjJmOWRlNjc0MGVmYmMzYTBhZjdiNDE5NGMxZDhiNDkxYWFlZGI4MGQyN2JiNjQ2Yzc5NjUzZmJkNTdiNjg3ZDhhZTQ1NmFhNzE0ZmM4NDllNzMwMTQ4YWZmNzBlNTU1NTU=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ru",
+    "languages": ["ru", "en"]
+  }
+}
