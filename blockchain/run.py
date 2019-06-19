@@ -16,6 +16,7 @@ blockchain = Blockchain()
 
 @app.route('/mine', methods=['GET'])
 def mine():
+    consensus()
     # Мы запускаем алгоритм подтверждения работы, чтобы получить следующее подтверждение…
     last_block = blockchain.last_block
     last_proof = last_block['proof']
@@ -74,11 +75,13 @@ def register_nodes():
     values = request.get_json()
     nodes = list()
     nodes = values.get('nodes')
+
     if nodes is None:
         return "Error: Please supply a valid list of nodes", 400
 
     for node in nodes:
-        blockchain.register_node(node)
+        print("Adding node..",node)
+        blockchain.register_node(nodes)
 
     response = {
         'message': 'New nodes have been added',
