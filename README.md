@@ -14,7 +14,7 @@
 6. Для запуска сервиса требуется ввести:
     * python wsgi.py
     
-После запуска консоль должна отобразить:
+После запуска, консоль должна отобразить:
 ~~~
  * Serving Flask app "Python.flask_runner" (lazy loading)
  * Environment: production
