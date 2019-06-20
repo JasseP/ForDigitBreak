@@ -14,7 +14,7 @@ node_identifier = str(uuid4()).replace('-', '')
 blockchain = Blockchain()
 
 
-@app.route('/mine', methods=['GET'])
+@app.route('/mine', methods=['GET','POST'])
 def mine():
     consensus()
     # Мы запускаем алгоритм подтверждения работы, чтобы получить следующее подтверждение…
@@ -22,13 +22,19 @@ def mine():
     last_proof = last_block['proof']
     proof = blockchain.proof_of_work(last_proof)
 
+    if request.method == 'POST':
+        values = request.get_json()
+        data =values['data']  # Your form's
+    else:
+        data = ''
+
     # Мы должны получить вознаграждение за найденное подтверждение
     # Отправитель “0” означает, что узел заработал крипто-монету
     blockchain.new_transaction(
         sender="0",
         recipient=node_identifier,
         amount=1,
-        data=""
+        data=data
     )
 
     # Создаем новый блок, путем внесения его в цепь
@@ -109,4 +115,4 @@ def consensus():
 
 port = input()
 if __name__ == '__main__':
-    app.run(host='localhost', port=port)
+    app.run(host='192.168.1.6', port=port)
