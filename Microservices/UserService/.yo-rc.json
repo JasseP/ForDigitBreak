@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ru.digitbreak.userservice",
+      "nativeLanguage": "ru"
+    },
+    "jhipsterVersion": "6.1.0",
+    "applicationType": "microservice",
+    "baseName": "UserService",
+    "packageName": "ru.digitbreak.userservice",
+    "packageFolder": "ru/digitbreak/userservice",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "Nzc4NTZjZjg0ZDQyOThhMDUwMWQwZDAxZWY0YzMzODUwNjEzMzZlMTE3MDkwMDdiN2Q0ZTA2OGNiOThhYWE2NzZiOTlkMWU1NGQ1ZDg1MTc3MTI0Njk1YzE4YzJlZTExMGM1Y2VlMjQxNWY0NmQxNjRhZGViMzFiMDFkNWI5NDQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "ru",
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
