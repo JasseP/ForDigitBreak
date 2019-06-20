@@ -37,7 +37,7 @@ class Blockchain(object):
         self.chain.append(block)
         return block
 
-    def new_transaction(self, sender, recipient, amount, data):
+    def new_transaction(self, sender, recipient, amount, file_name, file_hash):
         """
                Направляет новую транзакцию в следующий блок
 
@@ -51,7 +51,8 @@ class Blockchain(object):
             'sender': sender,
             'recipient': recipient,
             'amount': amount,
-            'data':data
+            'file_name': file_name,
+            'file_hash': file_hash
 
         })
 

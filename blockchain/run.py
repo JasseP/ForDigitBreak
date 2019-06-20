@@ -24,9 +24,11 @@ def mine():
 
     if request.method == 'POST':
         values = request.get_json()
-        data =values['data']  # Your form's
+        file_hash = values['file_hash']  # Your form's
+        file_name = values['file_name']  # Your form's
     else:
-        data = ''
+        file_hash = ''  # Your form's
+        file_name = ''  # Your form's
 
     # Мы должны получить вознаграждение за найденное подтверждение
     # Отправитель “0” означает, что узел заработал крипто-монету
@@ -34,7 +36,8 @@ def mine():
         sender="0",
         recipient=node_identifier,
         amount=1,
-        data=data
+        file_name=file_name,
+        file_hash=file_hash
     )
 
     # Создаем новый блок, путем внесения его в цепь
@@ -56,12 +59,13 @@ def new_transaction():
     values = request.get_json()
 
     # Убедитесь в том, что необходимые поля находятся среди POST-данных
-    required = ['sender', 'recipient', 'amount','data']
+    required = ['sender', 'recipient', 'amount', 'file_name', 'file_hash']
     if not all(k in values for k in required):
         return 'Missing values', 400
 
     # Создание новой транзакции
-    index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'], values['data'])
+    index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'],
+                                       values['file_name'], values['file_hash'])
 
     response = {'message': f'Transaction will be added to Block {index}'}
     return jsonify(response), 201
@@ -115,4 +119,4 @@ def consensus():
 
 port = input()
 if __name__ == '__main__':
-    app.run(host='192.168.1.6', port=port)
+    app.run(host='192.168.1.11', port=port)
