@@ -28,7 +28,7 @@ import ru.digitbreak.mobileapp.service.network.api.UserApi;
 @Module
 public class NetworkModule {
 
-    private final String SERVER_URL = "http://192.168.209.131:8888/";
+    private final String SERVER_URL = "http://192.168.1.12:8888/";
 
     @Provides
     @AppScope

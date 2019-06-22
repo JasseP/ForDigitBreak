@@ -19,6 +19,13 @@ logging:
     ru.digitbreak.userservice: INFO
     io.github.jhipster: INFO
 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+
 management:
   metrics:
     export:
@@ -117,7 +124,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: Nzc4NTZjZjg0ZDQyOThhMDUwMWQwZDAxZWY0YzMzODUwNjEzMzZlMTE3MDkwMDdiN2Q0ZTA2OGNiOThhYWE2NzZiOTlkMWU1NGQ1ZDg1MTc3MTI0Njk1YzE4YzJlZTExMGM1Y2VlMjQxNWY0NmQxNjRhZGViMzFiMDFkNWI5NDQ=
+        base64-secret: NTg5NjVjMjk2YWVlYmI4MWIwZDlkNDRlY2VmNWEzOGM5NjlhOTIzZjFmNWQ5OGRmMTMzYjhhZjIxNTEwZjU3NThkMmFiOTI0YmUyNWU0MmU3MGQ0Mzg5ZWY2MjMyMzM0Yzg0MjBlZGQ0N2U2NzFkMjQ2NGU2MDcwNWRkOTM0OTU=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

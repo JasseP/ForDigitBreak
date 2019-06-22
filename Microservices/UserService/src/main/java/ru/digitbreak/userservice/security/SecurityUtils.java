@@ -1,5 +1,6 @@
 package ru.digitbreak.userservice.security;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -43,6 +44,17 @@ public final class SecurityUtils {
         return Optional.ofNullable(securityContext.getAuthentication())
             .filter(authentication -> authentication.getCredentials() instanceof String)
             .map(authentication -> (String) authentication.getCredentials());
+    }
+
+
+
+    public static String getCurrentAuthorizationHeaderValue() {
+        SecurityContext securityContext = SecurityContextHolder.getContext();
+        Authentication authentication = securityContext.getAuthentication();
+        if (authentication != null && authentication.getCredentials() instanceof String) {
+            return "Bearer "+authentication.getCredentials();
+        }
+        return null;
     }
 
     /**

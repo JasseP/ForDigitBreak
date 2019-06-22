@@ -13,6 +13,13 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: Gateway
+    instanceId: Gateway:${spring.application.instance-id:${random.value}}
+
 spring:
   application:
     name: Gateway
@@ -96,7 +103,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: YmNkZjgxMzJjZGQ2MDg2NTFiMDBmOTk1NmYxYjVjZDZkODIwMjc1N2Q1MmRhMGI3MWY2MzZhMDY5MTMyZWIyMGQyM2I5MjY2NmY0YmM5ZDFkM2VjNmI2ZGExMDczNTA0NWUyNmY0ODc4MDc1ZDRhZWQ2ZTk1ZDczYjVkYmJhNTc=
+        base64-secret: YzU5OGQ5NzQxNTA4NmZhYTMyNDkxY2QwZmNjNTEwMzMwYmQ4NDVhZWQ5ZTdhMTNlMGU3MzAxM2ExZTFkY2Q5OWEzMmMzZTRiNzY5Yjk4YjAwNDIzNjg3Zjc2N2FiOTE5YjIzZDI0Y2NjYzMzYTczZWI1MDZjZTZlYjU2ZTViZjk=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:
