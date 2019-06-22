@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ru.digitbreak.gateway",
+      "nativeLanguage": "ru"
+    },
+    "jhipsterVersion": "6.1.0",
+    "applicationType": "gateway",
+    "baseName": "Gateway",
+    "packageName": "ru.digitbreak.gateway",
+    "packageFolder": "ru/digitbreak/gateway",
+    "serverPort": "8888",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YzU5OGQ5NzQxNTA4NmZhYTMyNDkxY2QwZmNjNTEwMzMwYmQ4NDVhZWQ5ZTdhMTNlMGU3MzAxM2ExZTFkY2Q5OWEzMmMzZTRiNzY5Yjk4YjAwNDIzNjg3Zjc2N2FiOTE5YjIzZDI0Y2NjYzMzYTczZWI1MDZjZTZlYjU2ZTViZjk=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "slate",
+    "clientThemeVariant": "dark",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ru",
+    "languages": ["ru", "en"]
+  }
+}
